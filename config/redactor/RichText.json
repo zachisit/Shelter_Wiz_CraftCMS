@@ -1,0 +1,8 @@
+{
+	"minHeight": "75px",
+	"buttons": ["bold", "italic", "unorderedlist", "orderedlist", "link", "html"],
+	"toolbarFixed": true,
+	"linkNewTab": true,
+	"cleanOnEnter": false,
+	"cleanInlineOnEnter": false
+}

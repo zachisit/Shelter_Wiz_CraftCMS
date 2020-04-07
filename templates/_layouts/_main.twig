@@ -1,0 +1,34 @@
+{#-- Extend base layout --#}
+{% extends "_layouts/_base" %}
+
+{#-- Set class on html element --#}
+{% set htmlClass = "" %}
+
+{#-- Set class on body element --#}
+{% set bodyClass = "" %}
+
+{#-- Set body layout on html element --#}
+{% block body %}
+
+    <div id="page-container">
+
+        {# -- Main Header/Nav -- #}
+        {% include "_partials/_header.twig" %}
+
+        <div id="content-container">
+
+            <main>
+
+                {# -- Primary content block -- #}
+                {% block content %}{% endblock %}
+
+            </main>
+
+        </div>
+
+        {# -- Footer -- #}
+        {% include "_partials/_footer.twig" %}
+
+    </div>
+
+{% endblock %}

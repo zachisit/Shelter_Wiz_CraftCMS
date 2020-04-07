@@ -1,0 +1,70 @@
+//  * Utilities module for Craft CMS
+//  *
+//  * Override CSS
+//  *
+//  * @author    Vector Media Group
+//  * @copyright Copyright (c) 2019 Vector Media Group
+//  * @link      https://vectormediagroup.com
+//  * @package   UtilitiesModule
+//  * @since     0.0.1
+
+//===================//
+// START: LOGIN FORM //
+//===================//
+
+// body.login {
+// 	background: #004789;
+// 	background-size: cover;
+// 	box-sizing: border-box;
+// }
+
+// #login-form h1 {
+// 	color: #fff !important;
+// }
+
+// body.login, body.login #forgot-password {
+// 	color: rgba(#FFF, .75);
+// }
+
+// body.login input.checkbox:checked:not(:indeterminate) + label:before, div.checkbox.checked:not(.indeterminate):before, .sel div.checkbox:not(.indeterminate):before {
+// 	color: #333 !important;
+// }
+
+// body.login #login-form input {
+// 	border: none;
+// 	border-bottom: 2px solid rgba(#fff, .3);
+// 	padding-left: 0;
+// 	color: #fff;
+// }
+
+// body.login #login-form input:not([type=submit]) {
+// 	background: none;
+// 	border-radius: 0;
+// }
+
+
+// #login-form input[type=submit] {
+// 	border-bottom: none !important;
+// }
+
+//=================//
+// END: LOGIN FORM //
+//=================//
+
+//=========================//
+// START: GLOBAL OVERRIDES //
+//=========================//
+
+
+#entryType-field {
+	background: #fff;
+
+	* {
+		font-weight: bold !important;
+	}
+}
+
+.matrixblockpreview-image {
+	display: block;
+	width: 100%;
+}

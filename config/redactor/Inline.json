@@ -1,0 +1,7 @@
+{
+	"air": true,
+	"buttons": ["bold", "italic", "link", "html"],
+	"breakline": true,
+	"enterKey": false,
+	"pastePlainText": true
+}

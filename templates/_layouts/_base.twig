@@ -1,0 +1,78 @@
+{#-- Set a base url hash -- #}
+{% set baseUrl = alias('@web') ~ '/' %}
+
+{#-- Set Headers -- #}
+{% header "Link: <#{baseUrl}>; rel=dns-prefetch;,<#{baseUrl}>; rel=preconnect; crossorigin;" %}
+
+{#-- Opening HTML Document -- #}
+    <!DOCTYPE html>
+    <html lang="{{ craft.app.language |slice(0,2) }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#" {% if htmlClass is defined %}class="{{ htmlClass }}"{% endif %}>
+
+        {#-- Head -- #}
+        <head>
+            {#-- Opening HEAD Template Injection -- #}
+            {% block _openingHeadInjection %}{% endblock %}
+
+            {#-- OPTIONAL: Opening HEAD Global Injection -- #}
+            {# {{- codeInjections.openingHeadInjection|raw -}} #}
+
+            {#-- OPTIONAL: Opening HEAD Entry Injection -- #}
+            {# {{- entry.openingHeadInjection|raw -}} #}
+
+            <link rel="icon" href="favicon.ico">
+
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <link rel="dns-prefetch" href="{{ baseUrl }}">
+            <link rel="preconnect" href="{{ baseUrl }}" crossorigin>
+
+            <link rel="preload" href="https://use.typekit.net/XXX" as="style">
+            <link rel="preload" href="{{ mix('css/main.css') }}" as="style">
+            <link rel="preload" href="{{ mix('js/main.js') }}" as="script">
+
+            <link rel="stylesheet" href="https://use.typekit.net/XXX">
+            <link rel="stylesheet" href="{{ mix('css/main.css') }}">
+
+            <script src="{{ mix('js/main.js') }}"></script>
+
+            {#-- Closing HEAD Template Injection -- #}
+            {% block _closingHeadInjection %}{% endblock %}
+
+            {#-- OPTIONAL: Closing HEAD Global Injection -- #}
+            {# {{- codeInjections.closingHeadInjection|raw -}} #}
+
+            {#-- OPTIONAL: Closing HEAD Entry Injection -- #}
+            {# {{- entry.closingHeadInjection|raw -}} #}
+
+            {#-- Get any Craft set head injections --#}
+            {{ head() }}
+        </head>
+
+        {# -- Body -- #}
+        <body class="font-sans antialiased">
+
+
+            {#-- Opening BODY Template Injection -- #}
+            {% block _openingBodyInjection %}{% endblock %}
+
+            {#-- OPTIONAL: Opening BODY Global Injection -- #}
+            {# {{- codeInjections.openingBodyInjection|raw -}} #}
+
+            {#-- OPTIONAL: Opening BODY Entry Injection -- #}
+            {# {{- entry.openingBodyInjection|raw -}} #}
+
+            {% block body %}{% endblock %}
+
+            {#-- Closing BODY Template Injection -- #}
+            {% block _closingBodyInjection %}{% endblock %}
+
+            {#-- OPTIONAL: Closing BODY Global Injection -- #}
+            {# {{- codeInjections.closingBodyInjection|raw -}} #}
+
+            {#-- OPTIONAL: Closing BODY Entry Injection -- #}
+            {# {{- entry.closingBodyInjection|raw -}} #}
+
+        </body>
+    </html>

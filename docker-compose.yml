@@ -1,0 +1,46 @@
+version: '3.7'
+services:
+    web:
+        build: ./docker/services/web
+        volumes:
+            - nfs:/var/www:consistent
+            - dist:/var/www/web/dist
+        expose:
+            - 80
+            - 443
+        environment:
+            VIRTUAL_HOST: ${VIRTUAL_HOST}
+            HC_WEB_DOCUMENT_ROOT: /var/www/web
+            HC_PHP_MEMORY_LIMIT: 512M
+            HC_PHP_UPLOAD_MAX_FILESIZE: 256M
+            HC_PHP_POST_MAX_SIZE: 100M
+            HC_PHP_MAX_INPUT_VARS: 5000
+            HC_PHP_MAX_EXECUTION_TIME: 120
+            HTTPS_METHOD: redirect
+    node:
+        image: node:12
+        working_dir: /home/node/app
+        environment:
+            VIRTUAL_HOST: hot-${VIRTUAL_HOST}
+            VIRTUAL_PROTO: https
+            HTTPS_METHOD: redirect
+        volumes:
+            - ${PWD}:/home/node/app:consistent
+            - dist:/home/node/app/web/dist
+        expose:
+            - 443
+        restart: always
+        command: npm run hot
+volumes:
+    dist:
+    nfs:
+        name: ${VIRTUAL_HOST}-nfs
+        driver: local
+        driver_opts:
+            type: nfs
+            o: addr=host.docker.internal,rw,nolock,hard,nointr,nfsvers=3
+            device: ":${PROJECT_DIRECTORY}"
+networks:
+    default:
+        external:
+            name: dash

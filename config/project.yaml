@@ -1,0 +1,78 @@
+dateModified: 1583961016
+email:
+  fromEmail: $SYSTEM_EMAIL_ADDRESS
+  fromName: $SENDER_NAME
+  template: ''
+  transportSettings: null
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  771f618d-ac8c-472c-ae49-b4e1357406ff:
+    name: Common
+plugins:
+  command-palette:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  empty-coalesce:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  environment-label:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  linkit:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.8
+  matrixmate:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  mix:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+siteGroups:
+  954f3b0b-e9ea-4a38-9df5-77d84f8aeb43:
+    name: 'Happy Cog Craft CMS Boilerplate'
+sites:
+  28ddc74b-22f4-45d9-9062-a22e5d7f9be6:
+    baseUrl: $DEFAULT_SITE_URL
+    handle: default
+    hasUrls: true
+    language: en-US
+    name: 'Happy Cog Craft CMS Boilerplate'
+    primary: true
+    siteGroup: 954f3b0b-e9ea-4a38-9df5-77d84f8aeb43
+    sortOrder: 1
+system:
+  edition: pro
+  live: true
+  name: $SITE_NAME
+  schemaVersion: 3.4.10
+  timeZone: America/New_York
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true
+volumes:
+  d7e6a9e9-38f9-4b2f-a595-35c76b9f9272:
+    handle: guide
+    hasUrls: true
+    name: Guide
+    settings:
+      path: '@assetBasePath/craft/guide'
+    sortOrder: 1
+    type: craft\volumes\Local
+    url: '@assetBaseUrl/craft/guide'

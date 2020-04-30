@@ -1,8 +1,8 @@
 {
   "require": {
     "am-impact/amcommand": "^3.1.4",
-    "craftcms/cms": "3.4.9",
-    "craftcms/redactor": "2.6.0.1",
+    "craftcms/cms": "3.4.17.1",
+    "craftcms/redactor": "2.6.1",
     "fruitstudios/linkit": "^1.0",
     "misterbk/mix": "^1.5",
     "mmikkel/cp-field-inspect": "1.1.3",
@@ -11,6 +11,8 @@
     "putyourlightson/craft-blitz": "^2.2.3",
     "topshelfcraft/environment-label": "^3.1.5",
     "vaersaagod/matrixmate": "^1.2",
+    "verbb/navigation": "1.3.13",
+    "verbb/super-table": "2.4.9",
     "vlucas/phpdotenv": "^3.4.0",
     "wbrowar/guide": "2.1.3.3"
   },

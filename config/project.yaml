@@ -1,4 +1,4 @@
-dateModified: 1583961016
+dateModified: 1588251008
 email:
   fromEmail: $SYSTEM_EMAIL_ADDRESS
   fromName: $SENDER_NAME
@@ -6,8 +6,390 @@ email:
   transportSettings: null
   transportType: craft\mail\transportadapters\Sendmail
 fieldGroups:
+  40ef1322-0f91-4250-bc9b-42d261ee6de7:
+    name: Footer
+  443b2bb4-acc6-48c7-b940-546543070bce:
+    name: Navs
+  589e4cca-334f-4482-8ca2-ffb31037eae5:
+    name: Story
   771f618d-ac8c-472c-ae49-b4e1357406ff:
     name: Common
+fields:
+  1d9ed1c9-7c86-40d7-b09f-67174234150a:
+    contentColumnType: text
+    fieldGroup: 589e4cca-334f-4482-8ca2-ffb31037eae5
+    handle: contentTableF
+    instructions: ''
+    name: 'Content Table'
+    searchable: true
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Color
+                -
+                  - handle
+                  - color
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - color
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Title
+                -
+                  - handle
+                  - title
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col3
+            -
+              __assoc__:
+                -
+                  - heading
+                  - ''
+                -
+                  - handle
+                  - ''
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+            -
+              - col3
+              - ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  4d844d37-f1dd-4ccc-93c7-b758dfd62bc5:
+    contentColumnType: string
+    fieldGroup: 771f618d-ac8c-472c-ae49-b4e1357406ff
+    handle: contentBlock
+    instructions: ''
+    name: 'Content Blocks'
+    searchable: true
+    settings:
+      contentTable: '{{%matrixcontent_contentblock}}'
+      maxBlocks: ''
+      minBlocks: ''
+      propagationMethod: all
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix
+globalSets:
+  7a3e1fcb-c768-47f6-87d2-c1c881769bf3:
+    fieldLayouts:
+      f14a1601-1509-4a2a-84af-8caa604fb3f3:
+        tabs:
+          -
+            fields:
+              1d9ed1c9-7c86-40d7-b09f-67174234150a:
+                required: false
+                sortOrder: 1
+            name: Story
+            sortOrder: 1
+    handle: story
+    name: Story
+  83aaee7d-56ae-41e0-b6ed-22345189e21c:
+    fieldLayouts:
+      6be1a098-21ec-4589-b983-13304f212014:
+        tabs:
+          -
+            name: 'Footer Left'
+            sortOrder: 1
+          -
+            name: 'Footer Right'
+            sortOrder: 2
+    handle: footer
+    name: Footer
+  9b3a9ae3-de91-40ff-9caf-eb58ac5d4cb6:
+    handle: contactForm
+    name: 'Contact Form'
+matrixBlockTypes:
+  07cbb1cb-a5ea-45e9-ab90-24a6903c83ab:
+    field: 4d844d37-f1dd-4ccc-93c7-b758dfd62bc5
+    fieldLayouts:
+      976ef015-b383-4824-af9c-9fd19822d966:
+        tabs:
+          -
+            fields:
+              ded55016-52c8-4cc1-931a-6b612f64c703:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      ded55016-52c8-4cc1-931a-6b612f64c703:
+        contentColumnType: string
+        fieldGroup: null
+        handle: image
+        instructions: ''
+        name: Image
+        searchable: true
+        settings:
+          allowedKinds: null
+          defaultUploadLocationSource: 'volume:d7e6a9e9-38f9-4b2f-a595-35c76b9f9272'
+          defaultUploadLocationSubpath: ''
+          limit: ''
+          localizeRelations: false
+          restrictFiles: ''
+          selectionLabel: ''
+          showUnpermittedFiles: false
+          showUnpermittedVolumes: false
+          singleUploadLocationSource: 'volume:d7e6a9e9-38f9-4b2f-a595-35c76b9f9272'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources: '*'
+          targetSiteId: null
+          useSingleFolder: false
+          validateRelatedElements: ''
+          viewMode: list
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
+    handle: fullWidthImage
+    name: 'Full Width Image'
+    sortOrder: 4
+  2cd9f154-548a-4e8a-bc57-c27687fbb778:
+    field: 4d844d37-f1dd-4ccc-93c7-b758dfd62bc5
+    fieldLayouts:
+      8e81cf6f-c162-4be7-b4f6-b03f047e2db1:
+        tabs:
+          -
+            fields:
+              c828c1a5-a48c-48a0-9a80-236aa74f0ec9:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      c828c1a5-a48c-48a0-9a80-236aa74f0ec9:
+        contentColumnType: string
+        fieldGroup: null
+        handle: columnInformation
+        instructions: ''
+        name: 'Column Information'
+        searchable: true
+        settings:
+          columns:
+            __assoc__:
+              -
+                - 1384403b-8f87-48fd-aba9-49a2fbe23d7b
+                -
+                  __assoc__:
+                    -
+                      - width
+                      - ''
+              -
+                - b2d39e69-298a-40fc-ad8e-9398730b8293
+                -
+                  __assoc__:
+                    -
+                      - width
+                      - ''
+              -
+                - 9b4b65c4-6c16-488a-8921-903ddd4792e8
+                -
+                  __assoc__:
+                    -
+                      - width
+                      - ''
+          contentTable: '{{%stc_6_columninformation}}'
+          fieldLayout: table
+          maxRows: '3'
+          minRows: '1'
+          propagationMethod: all
+          selectionLabel: ''
+          staticField: ''
+        translationKeyFormat: null
+        translationMethod: site
+        type: verbb\supertable\fields\SuperTableField
+    handle: columnExplainer
+    name: 'Column Explainer'
+    sortOrder: 2
+  34bf33f0-c1b8-45b8-a6bd-15bca90121e2:
+    field: 4d844d37-f1dd-4ccc-93c7-b758dfd62bc5
+    fieldLayouts:
+      8d913135-80f2-42aa-ae07-ca125b4cf152:
+        tabs:
+          -
+            fields:
+              14e8568a-3517-4a8b-8190-d667359018f3:
+                required: false
+                sortOrder: 2
+              a3a818a8-520d-46f3-9389-d1ab9b27e3c8:
+                required: false
+                sortOrder: 3
+              b2268194-c68f-4832-8e8c-711b96ee7361:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      14e8568a-3517-4a8b-8190-d667359018f3:
+        contentColumnType: text
+        fieldGroup: null
+        handle: copy
+        instructions: ''
+        name: Copy
+        searchable: true
+        settings:
+          availableTransforms: '*'
+          availableVolumes: '*'
+          cleanupHtml: true
+          columnType: text
+          purifierConfig: ''
+          purifyHtml: '1'
+          redactorConfig: ''
+          removeEmptyTags: '1'
+          removeInlineStyles: '1'
+          removeNbsp: '1'
+          showUnpermittedFiles: false
+          showUnpermittedVolumes: false
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\redactor\Field
+      a3a818a8-520d-46f3-9389-d1ab9b27e3c8:
+        contentColumnType: string
+        fieldGroup: null
+        handle: image
+        instructions: ''
+        name: Image
+        searchable: true
+        settings:
+          allowedKinds: null
+          defaultUploadLocationSource: 'volume:d7e6a9e9-38f9-4b2f-a595-35c76b9f9272'
+          defaultUploadLocationSubpath: ''
+          limit: ''
+          localizeRelations: false
+          restrictFiles: ''
+          selectionLabel: ''
+          showUnpermittedFiles: false
+          showUnpermittedVolumes: false
+          singleUploadLocationSource: 'volume:d7e6a9e9-38f9-4b2f-a595-35c76b9f9272'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources: '*'
+          targetSiteId: null
+          useSingleFolder: false
+          validateRelatedElements: ''
+          viewMode: large
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
+      b2268194-c68f-4832-8e8c-711b96ee7361:
+        contentColumnType: string(1020)
+        fieldGroup: null
+        handle: heading
+        instructions: ''
+        name: Heading
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: 255
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+    handle: imageExplainerCta
+    name: 'Image Explainer CTA'
+    sortOrder: 1
+  70af2aec-96ea-4094-82e2-10d6b51af72c:
+    field: 4d844d37-f1dd-4ccc-93c7-b758dfd62bc5
+    fieldLayouts:
+      07a1f3b3-a03b-40a6-8d8b-e0297ba03848:
+        tabs:
+          -
+            fields:
+              1e9b44ee-89c0-49e9-9359-34bb0380c8c5:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      1e9b44ee-89c0-49e9-9359-34bb0380c8c5:
+        contentColumnType: text
+        fieldGroup: null
+        handle: headingCopy
+        instructions: ''
+        name: 'Heading Copy'
+        searchable: true
+        settings:
+          availableTransforms: '*'
+          availableVolumes: '*'
+          cleanupHtml: true
+          columnType: text
+          purifierConfig: ''
+          purifyHtml: '1'
+          redactorConfig: ''
+          removeEmptyTags: '1'
+          removeInlineStyles: '1'
+          removeNbsp: '1'
+          showUnpermittedFiles: false
+          showUnpermittedVolumes: false
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\redactor\Field
+    handle: fullWidthMessage
+    name: 'Full Width Message'
+    sortOrder: 3
+navigation:
+  navs:
+    0ae9374e-0cff-4f4e-b4fb-10fd04c21788:
+      handle: mainNav
+      instructions: ''
+      maxNodes: ''
+      name: 'Main Nav'
+      propagateNodes: false
+      sortOrder: 1
+      structure:
+        maxLevels: null
+        uid: 3010c0a1-6ae5-47b9-afea-5d4042db0b85
+    a8059be6-ea07-424b-88d2-1da92777ace7:
+      handle: footer
+      instructions: ''
+      maxNodes: ''
+      name: Footer
+      propagateNodes: false
+      sortOrder: 2
+      structure:
+        maxLevels: null
+        uid: 21e2c532-7114-4281-9868-5667a5748e5a
 plugins:
   command-palette:
     edition: standard
@@ -37,10 +419,113 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  navigation:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.17
   redactor:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.1
+sections:
+  746f705b-bbfb-4ed5-a136-563cddf538c7:
+    enableVersioning: true
+    entryTypes:
+      28020a38-9cc6-4bb6-b330-23ce2956c603:
+        fieldLayouts:
+          2f50fa4b-18a6-45bb-be5b-1ac28142815a:
+            tabs:
+              -
+                fields:
+                  4d844d37-f1dd-4ccc-93c7-b758dfd62bc5:
+                    required: false
+                    sortOrder: 2
+                name: Common
+                sortOrder: 1
+        handle: pages
+        hasTitleField: true
+        name: Pages
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: pages
+    name: Pages
+    previewTargets:
+      -
+        __assoc__:
+          -
+            - label
+            - 'Primary entry page'
+          -
+            - urlFormat
+            - '{url}'
+          -
+            - refresh
+            - '1'
+    propagationMethod: all
+    siteSettings:
+      28ddc74b-22f4-45d9-9062-a22e5d7f9be6:
+        enabledByDefault: true
+        hasUrls: true
+        template: _pages/_entry
+        uriFormat: '{slug}'
+    structure:
+      maxLevels: null
+      uid: 16eb4925-05ca-4f25-ab0f-fffc3322fe2f
+    type: structure
+  a13adf98-cd10-4aa2-b877-02ea7873413b:
+    enableVersioning: true
+    entryTypes:
+      3c52be48-2f92-41c1-a678-a4299bf0b3fa:
+        fieldLayouts:
+          cff670f8-4617-4c2b-ae9c-4118e482279c:
+            tabs:
+              -
+                fields:
+                  4d844d37-f1dd-4ccc-93c7-b758dfd62bc5:
+                    required: false
+                    sortOrder: 1
+                name: Common
+                sortOrder: 1
+              -
+                fields:
+                  1d9ed1c9-7c86-40d7-b09f-67174234150a:
+                    required: false
+                    sortOrder: 1
+                name: Story
+                sortOrder: 2
+        handle: home
+        hasTitleField: false
+        name: Home
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: ''
+    handle: home
+    name: Home
+    previewTargets:
+      -
+        __assoc__:
+          -
+            - label
+            - 'Primary entry page'
+          -
+            - urlFormat
+            - '{url}'
+          -
+            - refresh
+            - '1'
+    propagationMethod: all
+    siteSettings:
+      28ddc74b-22f4-45d9-9062-a22e5d7f9be6:
+        enabledByDefault: true
+        hasUrls: true
+        template: _pages/_home
+        uriFormat: home
+    type: single
 siteGroups:
   954f3b0b-e9ea-4a38-9df5-77d84f8aeb43:
     name: 'Happy Cog Craft CMS Boilerplate'
@@ -50,10 +535,258 @@ sites:
     handle: default
     hasUrls: true
     language: en-US
-    name: 'Happy Cog Craft CMS Boilerplate'
+    name: ShelterWiz
     primary: true
     siteGroup: 954f3b0b-e9ea-4a38-9df5-77d84f8aeb43
     sortOrder: 1
+superTableBlockTypes:
+  e1f692dd-d6f6-42dc-90da-86a4c809d2e2:
+    field: c828c1a5-a48c-48a0-9a80-236aa74f0ec9
+    fieldLayouts:
+      d2bcdfad-3812-4c72-9f68-f2a686274787:
+        tabs:
+          -
+            fields:
+              1384403b-8f87-48fd-aba9-49a2fbe23d7b:
+                required: false
+                sortOrder: 1
+              9b4b65c4-6c16-488a-8921-903ddd4792e8:
+                required: false
+                sortOrder: 3
+              b2d39e69-298a-40fc-ad8e-9398730b8293:
+                required: false
+                sortOrder: 2
+            name: Content
+            sortOrder: 1
+    fields:
+      1384403b-8f87-48fd-aba9-49a2fbe23d7b:
+        contentColumnType: text
+        fieldGroup: null
+        handle: heading
+        instructions: ''
+        name: Heading
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: null
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      9b4b65c4-6c16-488a-8921-903ddd4792e8:
+        contentColumnType: text
+        fieldGroup: null
+        handle: cta
+        instructions: ''
+        name: CTA
+        searchable: true
+        settings:
+          allowCustomText: ''
+          allowTarget: ''
+          defaultText: ''
+          selectLinkText: ''
+          types:
+            __assoc__:
+              -
+                - fruitstudios\linkit\models\Email
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - ''
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - customPlaceholder
+                      - ''
+              -
+                - fruitstudios\linkit\models\Phone
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - ''
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - customPlaceholder
+                      - ''
+              -
+                - fruitstudios\linkit\models\Url
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - ''
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - customPlaceholder
+                      - ''
+                    -
+                      - allowAlias
+                      - '1'
+                    -
+                      - allowMailto
+                      - '1'
+                    -
+                      - allowHash
+                      - '1'
+                    -
+                      - allowPaths
+                      - '1'
+              -
+                - fruitstudios\linkit\models\Twitter
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - ''
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - customPlaceholder
+                      - ''
+              -
+                - fruitstudios\linkit\models\Facebook
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - ''
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - customPlaceholder
+                      - ''
+              -
+                - fruitstudios\linkit\models\Instagram
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - ''
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - customPlaceholder
+                      - ''
+              -
+                - fruitstudios\linkit\models\LinkedIn
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - ''
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - customPlaceholder
+                      - ''
+              -
+                - fruitstudios\linkit\models\Entry
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - '1'
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - sources
+                      - '*'
+                    -
+                      - customSelectionLabel
+                      - ''
+              -
+                - fruitstudios\linkit\models\Category
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - ''
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - sources
+                      - '*'
+                    -
+                      - customSelectionLabel
+                      - ''
+              -
+                - fruitstudios\linkit\models\Asset
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - ''
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - sources
+                      - '*'
+                    -
+                      - customSelectionLabel
+                      - ''
+              -
+                - fruitstudios\linkit\models\User
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - ''
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - sources
+                      - '*'
+                    -
+                      - customSelectionLabel
+                      - ''
+                    -
+                      - userPath
+                      - ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: fruitstudios\linkit\fields\LinkitField
+      b2d39e69-298a-40fc-ad8e-9398730b8293:
+        contentColumnType: text
+        fieldGroup: null
+        handle: description
+        instructions: ''
+        name: Description
+        searchable: true
+        settings:
+          availableTransforms: '*'
+          availableVolumes: '*'
+          cleanupHtml: true
+          columnType: text
+          purifierConfig: ''
+          purifyHtml: '1'
+          redactorConfig: ''
+          removeEmptyTags: '1'
+          removeInlineStyles: '1'
+          removeNbsp: '1'
+          showUnpermittedFiles: false
+          showUnpermittedVolumes: false
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\redactor\Field
 system:
   edition: pro
   live: true

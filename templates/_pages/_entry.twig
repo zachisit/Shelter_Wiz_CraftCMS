@@ -1,8 +1,8 @@
 {# -- Extend Layout -- #}
 {% extends "_layouts/_main.twig" %}
-
 {# -- Injection points -- #}
 {% block _openingHeadInjection %}
+    SW Page here
 
 {% endblock %}
 
@@ -21,5 +21,7 @@
 {# -- Primary content block -- #}
 {% block content %}
 
-
+    {% for block in entry.contentBlock %}
+       {% include '_contentBlock/'~block.type %}
+    {% endfor %}
 {% endblock %}

@@ -1,3 +1,22 @@
-<header>
-
+<header class="bg-gray-300 w-full">
+    <div class="logo inline-block">
+        logo here
+    </div>
+    <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6 w-2/5 inline-block float-right">
+        {{ craft.navigation.render('mainNav', {
+            ulClass: 'w-full block flex-grow lg:flex lg:items-center lg:w-auto',
+            liClass: 'text-sm lg:flex-grow',
+            aClass: 'block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4',
+            activeClass: 'nav-active',
+            ulAttributes: {
+                'data-attr': 'Some value',
+            },
+            liAttributes: {
+                'data-attr': 'Some value',
+            },
+            aAttributes: {
+                'data-attr': 'Some value',
+            },
+        }) }}
+    </nav>
 </header>

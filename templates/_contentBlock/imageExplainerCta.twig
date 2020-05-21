@@ -1,4 +1,11 @@
-{{ block.heading }}
-{{ block.copy }}
 {% set image = block.image.first %}
-<img src="{{ image.url }}" alt="{{ image.title }}" />
+{% set order = (block.leftOrRightAlignment == 'right') ? 'order-last' : '' %}
+<div class="flex my-20">
+    <div class="{{order}} w-3/4">
+        <h3 class="text-3xl mb-3">{{ block.heading }}</h3>
+        <p>{{ block.copy }}</p>
+    </div>
+    <div>
+        <img src="{{ image.url }}" alt="{{ image.title }}" />
+    </div>
+</div>

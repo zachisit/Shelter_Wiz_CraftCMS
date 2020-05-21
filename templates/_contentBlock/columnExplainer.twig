@@ -1,15 +1,11 @@
 {% if block.columnInformation %}
-    <div class="flex w-full">
+    <div class="container flex">
         {% for col in block.columnInformation %}
-            <div class="flex-1">
-                <h3 class="xlr mb-3">{{ col.heading }}</h3>
-                <p>{{ col.description }}</p>
-                {{ col.cta }}
+            <div class="flex-1 text-center">
+                <h3 class="text-2xl mb-3">{{ col.heading }}</h3>
+                <p class="mb-4">{{ col.description }}</p>
+                {{ col.cta|raw }}
             </div>
-
-
-
         {% endfor %}
     </div>
-
 {% endif %}

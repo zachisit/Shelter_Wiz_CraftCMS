@@ -1,4 +1,4 @@
-dateModified: 1590064497
+dateModified: 1590083073
 email:
   fromEmail: $SYSTEM_EMAIL_ADDRESS
   fromName: $SENDER_NAME
@@ -222,6 +222,13 @@ matrixBlockTypes:
         settings:
           columns:
             __assoc__:
+              -
+                - f296f8ee-ead4-4ad2-b0ae-e466e5daa3fb
+                -
+                  __assoc__:
+                    -
+                      - width
+                      - ''
               -
                 - 1384403b-8f87-48fd-aba9-49a2fbe23d7b
                 -
@@ -703,13 +710,16 @@ superTableBlockTypes:
             fields:
               1384403b-8f87-48fd-aba9-49a2fbe23d7b:
                 required: false
-                sortOrder: 1
+                sortOrder: 2
               9b4b65c4-6c16-488a-8921-903ddd4792e8:
                 required: false
-                sortOrder: 3
+                sortOrder: 4
               b2d39e69-298a-40fc-ad8e-9398730b8293:
                 required: false
-                sortOrder: 2
+                sortOrder: 3
+              f296f8ee-ead4-4ad2-b0ae-e466e5daa3fb:
+                required: false
+                sortOrder: 1
             name: Content
             sortOrder: 1
     fields:
@@ -739,8 +749,8 @@ superTableBlockTypes:
         name: CTA
         searchable: true
         settings:
-          allowCustomText: ''
-          allowTarget: ''
+          allowCustomText: '1'
+          allowTarget: '1'
           defaultText: ''
           selectLinkText: ''
           types:
@@ -777,7 +787,7 @@ superTableBlockTypes:
                   __assoc__:
                     -
                       - enabled
-                      - ''
+                      - '1'
                     -
                       - customLabel
                       - ''
@@ -786,16 +796,16 @@ superTableBlockTypes:
                       - ''
                     -
                       - allowAlias
-                      - '1'
+                      - ''
                     -
                       - allowMailto
-                      - '1'
+                      - ''
                     -
                       - allowHash
-                      - '1'
+                      - ''
                     -
                       - allowPaths
-                      - '1'
+                      - ''
               -
                 - fruitstudios\linkit\models\Twitter
                 -
@@ -941,6 +951,34 @@ superTableBlockTypes:
         translationKeyFormat: null
         translationMethod: none
         type: craft\redactor\Field
+      f296f8ee-ead4-4ad2-b0ae-e466e5daa3fb:
+        contentColumnType: string
+        fieldGroup: null
+        handle: icon
+        instructions: ''
+        name: 'Font Awesome Icon'
+        searchable: true
+        settings:
+          allowedKinds: null
+          defaultUploadLocationSource: 'volume:d7e6a9e9-38f9-4b2f-a595-35c76b9f9272'
+          defaultUploadLocationSubpath: ''
+          limit: '1'
+          localizeRelations: false
+          restrictFiles: ''
+          selectionLabel: ''
+          showUnpermittedFiles: false
+          showUnpermittedVolumes: false
+          singleUploadLocationSource: 'volume:d7e6a9e9-38f9-4b2f-a595-35c76b9f9272'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources: '*'
+          targetSiteId: null
+          useSingleFolder: false
+          validateRelatedElements: ''
+          viewMode: large
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
 system:
   edition: pro
   live: true

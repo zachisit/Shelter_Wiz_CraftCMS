@@ -1,19 +1,10 @@
-<footer class="bg-darkPurple">
+<footer class="bg-darkPurple mt-32">
     <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6 w-2/5 inline-block float-right">
         {{ craft.navigation.render('footer', {
             ulClass: 'w-full block flex-grow lg:flex lg:items-center lg:w-auto',
             liClass: 'text-sm lg:flex-grow',
             aClass: 'block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4',
-            activeClass: 'nav-active',
-            ulAttributes: {
-                'data-attr': 'Some value',
-            },
-            liAttributes: {
-                'data-attr': 'Some value',
-            },
-            aAttributes: {
-                'data-attr': 'Some value',
-            },
+            activeClass: 'nav-active'
         }) }}
     </nav>
     <p>Made in the USA. Curated with CraftCMS.</p>

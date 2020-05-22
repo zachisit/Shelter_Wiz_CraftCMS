@@ -3,7 +3,9 @@ const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   theme: {
-    fontFamily:{},
+    fontFamily: {
+      'body': ['Roboto', 'sans-serif']
+    },
     extend: {
       colors: {
         darkPurple:'#2C2A4A',

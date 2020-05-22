@@ -1,10 +1,10 @@
 {% set image = block.image.first %}
-<div class="container mx-auto">
-    <div class="mr-6">
-        <h3 class="text-3xl mb-3">{{ block.heading }}</h3>
-        <p class="mb-4">{{ block.copy }}</p>
+<div class="container mx-auto w-4/6 mb-20">
+    <div class="mb-7 text-center w-3/5 mx-auto">
+        <h3 class="text-3xl mb-3 font-hairline">{{ block.heading }}</h3>
+        <p class="mb-4 text-lg leading-relaxed">{{ block.copy }}</p>
     </div>
     <div>
-        <img class="border-black border-8 rounded-lg shadow-xl" src="{{ image.url }}" alt="{{ image.title }}" />
+        <img class="border-lightBlue border-8 rounded-lg shadow-xl" src="{{ image.url }}" alt="{{ image.title }}" />
     </div>
 </div>

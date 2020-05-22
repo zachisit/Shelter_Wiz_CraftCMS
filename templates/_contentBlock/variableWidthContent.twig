@@ -1,0 +1,16 @@
+{% switch block.widthSize %}
+    {% case '1' %}
+        {% set width = 'w-full' %}
+    {% case '2.3' %}
+        {% set width = 'w-2/3' %}
+    {% case '1.3' %}
+        {% set width = 'w-1/3' %}
+    {% case '1.2' %}
+        {% set width = 'w-2/4' %}
+{% endswitch %}
+<div class="my-10 mx-auto text-center {{ width }}">
+    {% if block.headline %}
+        <h3 class="leading-10 text-xl mb-5 text-gray-700">{{ block.headline }}</h3>
+    {% endif %}
+    {{ block.contentMessage }}
+</div>

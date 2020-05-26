@@ -1,0 +1,18 @@
+{% if block.pricingTable %}
+    <table class="table-auto">
+        <thead>
+        <tr>
+            <th>Feature</th>
+            <th>Included?</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for entry in block.pricingTable %}
+            <tr>
+                <td>{{ entry.entryName }}</td>
+                <td>checkmark</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endif %}

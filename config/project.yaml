@@ -1,4 +1,4 @@
-dateModified: 1590146252
+dateModified: 1590492713
 email:
   fromEmail: $SYSTEM_EMAIL_ADDRESS
   fromName: $SENDER_NAME
@@ -10,88 +10,11 @@ fieldGroups:
     name: Footer
   443b2bb4-acc6-48c7-b940-546543070bce:
     name: Navs
-  589e4cca-334f-4482-8ca2-ffb31037eae5:
-    name: Story
   771f618d-ac8c-472c-ae49-b4e1357406ff:
     name: Common
+  d1aa7193-5429-493b-92d2-11fcbe8609a3:
+    name: Pricing
 fields:
-  1d9ed1c9-7c86-40d7-b09f-67174234150a:
-    contentColumnType: text
-    fieldGroup: 589e4cca-334f-4482-8ca2-ffb31037eae5
-    handle: contentTableF
-    instructions: ''
-    name: 'Content Table'
-    searchable: true
-    settings:
-      addRowLabel: 'Add a row'
-      columnType: text
-      columns:
-        __assoc__:
-          -
-            - col1
-            -
-              __assoc__:
-                -
-                  - heading
-                  - Color
-                -
-                  - handle
-                  - color
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - color
-          -
-            - col2
-            -
-              __assoc__:
-                -
-                  - heading
-                  - Title
-                -
-                  - handle
-                  - title
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col3
-            -
-              __assoc__:
-                -
-                  - heading
-                  - ''
-                -
-                  - handle
-                  - ''
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-      defaults:
-        -
-          __assoc__:
-            -
-              - col1
-              - ''
-            -
-              - col2
-              - ''
-            -
-              - col3
-              - ''
-      maxRows: ''
-      minRows: ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Table
   4d844d37-f1dd-4ccc-93c7-b758dfd62bc5:
     contentColumnType: string
     fieldGroup: 771f618d-ac8c-472c-ae49-b4e1357406ff
@@ -131,10 +54,6 @@ globalSets:
       f14a1601-1509-4a2a-84af-8caa604fb3f3:
         tabs:
           -
-            fields:
-              1d9ed1c9-7c86-40d7-b09f-67174234150a:
-                required: false
-                sortOrder: 1
             name: Story
             sortOrder: 1
     handle: story
@@ -282,6 +201,9 @@ matrixBlockTypes:
               b2268194-c68f-4832-8e8c-711b96ee7361:
                 required: true
                 sortOrder: 1
+              fa3360f7-da58-4f7c-8e6a-904c45013838:
+                required: false
+                sortOrder: 5
             name: Content
             sortOrder: 1
     fields:
@@ -389,6 +311,18 @@ matrixBlockTypes:
         translationKeyFormat: null
         translationMethod: none
         type: craft\fields\PlainText
+      fa3360f7-da58-4f7c-8e6a-904c45013838:
+        contentColumnType: string(7)
+        fieldGroup: null
+        handle: backgroundColor
+        instructions: ''
+        name: 'Background Color'
+        searchable: true
+        settings:
+          defaultColor: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\Color
     handle: imageExplainerCta
     name: 'Image Explainer CTA'
     sortOrder: 1
@@ -522,6 +456,40 @@ matrixBlockTypes:
     handle: imageexplainertopfocuscta
     name: imageExplainerTopFocusCTA
     sortOrder: 5
+  cfe1eba1-4c36-46d5-9016-3d36e3fb98ef:
+    field: 4d844d37-f1dd-4ccc-93c7-b758dfd62bc5
+    fieldLayouts:
+      2dadf6c3-338c-4da0-94e2-7bb2f07a399f:
+        tabs:
+          -
+            fields:
+              71d74b19-aeac-4652-ac91-cdb874995ba6:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      71d74b19-aeac-4652-ac91-cdb874995ba6:
+        contentColumnType: string
+        fieldGroup: null
+        handle: pricingTable
+        instructions: ''
+        name: 'Pricing Table'
+        searchable: true
+        settings:
+          contentTable: '{{%stc_pricingtable}}'
+          fieldLayout: table
+          maxRows: ''
+          minRows: ''
+          propagationMethod: all
+          selectionLabel: ''
+          staticField: ''
+        translationKeyFormat: null
+        translationMethod: site
+        type: verbb\supertable\fields\SuperTableField
+    handle: pricingTable
+    name: 'Pricing Table'
+    sortOrder: 7
   fdcde59a-ab41-41c5-8d75-fa201eba23f3:
     field: 4d844d37-f1dd-4ccc-93c7-b758dfd62bc5
     fieldLayouts:
@@ -727,6 +695,9 @@ sections:
                     sortOrder: 1
                 name: Hero
                 sortOrder: 2
+              -
+                name: Pricing
+                sortOrder: 3
         handle: pages
         hasTitleField: true
         name: Pages
@@ -773,10 +744,6 @@ sections:
                 name: Common
                 sortOrder: 1
               -
-                fields:
-                  1d9ed1c9-7c86-40d7-b09f-67174234150a:
-                    required: false
-                    sortOrder: 1
                 name: Story
                 sortOrder: 2
         handle: home
@@ -821,6 +788,37 @@ sites:
     siteGroup: 954f3b0b-e9ea-4a38-9df5-77d84f8aeb43
     sortOrder: 1
 superTableBlockTypes:
+  27d55f65-a2c9-485f-a8cc-c3df2ffccce3:
+    field: 71d74b19-aeac-4652-ac91-cdb874995ba6
+    fieldLayouts:
+      de784467-7db8-4854-9f18-0c66a4f7f1d9:
+        tabs:
+          -
+            fields:
+              3350d146-885f-47de-894f-1e99717bd555:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      3350d146-885f-47de-894f-1e99717bd555:
+        contentColumnType: string(400)
+        fieldGroup: null
+        handle: entryName
+        instructions: ''
+        name: 'Entry Name'
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: 100
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
   e1f692dd-d6f6-42dc-90da-86a4c809d2e2:
     field: c828c1a5-a48c-48a0-9a80-236aa74f0ec9
     fieldLayouts:

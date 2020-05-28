@@ -1,18 +1,19 @@
 {% if block.pricingTable %}
-    <table class="table-auto">
+    <table class="table-fixed">
         <thead>
         <tr>
-            <th>Feature</th>
-            <th>Included?</th>
+            <th class="w-1/2">Feature</th>
+            <th class="w-1/4">Included?</th>
         </tr>
         </thead>
         <tbody>
         {% for entry in block.pricingTable %}
-            <tr>
-                <td>{{ entry.entryName }}</td>
-                <td>checkmark</td>
+            <tr class="border-solid border-2 border-gray-900 {{ loop.index0 is odd ? '' : 'bg-gray-100' }}">
+                <td class="p-2">{{ entry.entryName }}</td>
+                <td class="p-2 text-center">checkmark</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
+
 {% endif %}

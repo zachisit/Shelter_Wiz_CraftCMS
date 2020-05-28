@@ -4,6 +4,12 @@
     <div class="{{order}}">
         <h3 class="text-3xl mb-3 mt-5">{{ block.heading }}</h3>
         <p>{{ block.copy }}</p>
+        {% if block.linkCTA %}
+            <p class="mt-8 text-center
+">
+                <a class="buttonCTA" href="{{ block.linkCTA.url }}" title="{{ block.linkCTA.text }}">{{ block.linkCTA.text }}</a>
+            </p>
+        {% endif %}
     </div>
     <div>
         <img src="{{ image.url }}" alt="{{ image.title }}" />

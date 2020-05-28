@@ -6,6 +6,11 @@ module.exports = {
     fontFamily: {
       'body': ['Roboto', 'sans-serif']
     },
+    backgroundColor: {
+      darkPurple:'#2C2A4A',
+      lightPurple:'#907AD6',
+      lightBlue:'#7FDEFF'
+    },
     extend: {
       colors: {
         darkPurple:'#2C2A4A',

@@ -5,3 +5,7 @@
 @import "./_extensions";
 
 @tailwind utilities;
+
+.buttonCTA {
+  @apply bg-darkPuple text-center px-5 py-8 text-white-100 rounded-lg;
+}

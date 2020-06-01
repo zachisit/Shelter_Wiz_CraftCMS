@@ -4,8 +4,13 @@
 
 @import "./_extensions";
 
+.buttonCTA {
+  @apply transition ease-in-out duration-900 text-center px-7 py-2 bg-darkPurple rounded-lg text-white text-base;
+
+  &:hover {
+    @apply bg-lightPurple;
+  }
+}
+
 @tailwind utilities;
 
-.buttonCTA {
-  @apply bg-darkPuple text-center px-5 py-8 text-white-100 rounded-lg;
-}

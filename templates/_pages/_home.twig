@@ -19,6 +19,7 @@
 
 {# -- Primary content block -- #}
 {% block content %}
+    {% include '_contentBlock/homeHero.twig' %}
     {% for block in entry.contentBlock %}
         {% include '_contentBlock/'~block.type %}
     {% endfor %}

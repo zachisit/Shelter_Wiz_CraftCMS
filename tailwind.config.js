@@ -15,7 +15,8 @@ module.exports = {
       colors: {
         darkPurple:'#2C2A4A',
         lightPurple:'#907AD6',
-        lightBlue:'#7FDEFF'
+        lightBlue:'#7FDEFF',
+        ctaSecondary:'#5a5a5a'
       }
     }
   },

@@ -1,16 +1,18 @@
-<header class="bg-darkPurple w-full">
-    <div class="logo inline-block w-40">
-        <a href="https://shelterwiz.com" title="https://shelterwiz.com Home">
-            <img class="w-10 inline-block" src="https://shelterwiz.com/wp-content/themes/shelter-wiz-twentynineteen/images/logo.png" alt="Logo">
-            <span class="mt-3 text-white text-2xl inline-block logoText">ShelterWiz</span>
-        </a>
+<header class="bg-darkPurple">
+    <div class="container mx-auto py-6">
+        <div class="logo inline-block w-40 relative">
+            <a href="{{ siteUrl }}" title="{{ siteName }} Home">
+                <img class="w-8 inline-block" src="https://shelterwiz.com/wp-content/themes/shelter-wiz-twentynineteen/images/logo.png" alt="Logo">
+                <span class="text-white lg:text-2xl inline-block font-semibold object-bottom absolute">ShelterWiz</span>
+            </a>
+        </div>
+        <nav class="items-center justify-between flex-wrap w-2/5 inline-block float-right mt-3">
+            {{ craft.navigation.render('mainNav', {
+                ulClass: 'w-full block flex-grow lg:flex lg:items-center lg:w-auto',
+                liClass: 'text-sm lg:flex-grow inline-block',
+                aClass: 'inline-block lg:inline-block lg:mt-0 uppercase text-white hover:text-lightBlue',
+                activeClass: 'nav-active'
+            }) }}
+        </nav>
     </div>
-    <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6 w-2/5 inline-block">
-        {{ craft.navigation.render('mainNav', {
-            ulClass: 'w-full block flex-grow lg:flex lg:items-center lg:w-auto',
-            liClass: 'text-sm lg:flex-grow inline-block',
-            aClass: 'block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4',
-            activeClass: 'nav-active'
-        }) }}
-    </nav>
 </header>

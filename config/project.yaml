@@ -1,4 +1,4 @@
-dateModified: 1590669530
+dateModified: 1591014974
 email:
   fromEmail: $SYSTEM_EMAIL_ADDRESS
   fromName: $SENDER_NAME
@@ -12,9 +12,26 @@ fieldGroups:
     name: Navs
   771f618d-ac8c-472c-ae49-b4e1357406ff:
     name: Common
+  7d3d7a77-b9ed-4801-802e-766227192fe5:
+    name: Home
   d1aa7193-5429-493b-92d2-11fcbe8609a3:
     name: Pricing
 fields:
+  210d2728-a086-4afd-a67a-2cc6e1a3f07e:
+    contentColumnType: string
+    fieldGroup: 7d3d7a77-b9ed-4801-802e-766227192fe5
+    handle: homeHero
+    instructions: ''
+    name: 'Home Hero'
+    searchable: true
+    settings:
+      contentTable: '{{%matrixcontent_homehero}}'
+      maxBlocks: ''
+      minBlocks: ''
+      propagationMethod: all
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix
   4d844d37-f1dd-4ccc-93c7-b758dfd62bc5:
     contentColumnType: string
     fieldGroup: 771f618d-ac8c-472c-ae49-b4e1357406ff
@@ -646,6 +663,81 @@ matrixBlockTypes:
     handle: imageexplainertopfocuscta
     name: imageExplainerTopFocusCTA
     sortOrder: 5
+  aae11920-4212-4c70-b52d-a6100191a1fd:
+    field: 4d844d37-f1dd-4ccc-93c7-b758dfd62bc5
+    fieldLayouts:
+      bd0ffc4d-a6c3-417f-a17c-c870bb6708c5:
+        tabs:
+          -
+            fields:
+              127e2a4f-3ac8-44df-a783-7a5b901c3db7:
+                required: false
+                sortOrder: 1
+              9e9c32a6-0ab9-4ac0-a2c6-c9594c60056c:
+                required: false
+                sortOrder: 2
+              e9189124-972a-4080-8cf7-c786e7041803:
+                required: false
+                sortOrder: 3
+            name: Content
+            sortOrder: 1
+    fields:
+      127e2a4f-3ac8-44df-a783-7a5b901c3db7:
+        contentColumnType: string(620)
+        fieldGroup: null
+        handle: heading
+        instructions: ''
+        name: Heading
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: 155
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      9e9c32a6-0ab9-4ac0-a2c6-c9594c60056c:
+        contentColumnType: text
+        fieldGroup: null
+        handle: copy
+        instructions: ''
+        name: Copy
+        searchable: true
+        settings:
+          availableTransforms: '*'
+          availableVolumes: '*'
+          cleanupHtml: true
+          columnType: text
+          purifierConfig: ''
+          purifyHtml: '1'
+          redactorConfig: ''
+          removeEmptyTags: '1'
+          removeInlineStyles: '1'
+          removeNbsp: '1'
+          showUnpermittedFiles: false
+          showUnpermittedVolumes: false
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\redactor\Field
+      e9189124-972a-4080-8cf7-c786e7041803:
+        contentColumnType: string(7)
+        fieldGroup: null
+        handle: backgroundColor
+        instructions: ''
+        name: 'Background Color'
+        searchable: true
+        settings:
+          defaultColor: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\Color
+    handle: fullWidthMessageCta
+    name: 'Full Width Message CTA'
+    sortOrder: 8
   cfe1eba1-4c36-46d5-9016-3d36e3fb98ef:
     field: 4d844d37-f1dd-4ccc-93c7-b758dfd62bc5
     fieldLayouts:
@@ -689,6 +781,276 @@ matrixBlockTypes:
     handle: pricingTable
     name: 'Pricing Table'
     sortOrder: 7
+  e5520f40-1759-45ac-8928-527f2b87de3c:
+    field: 210d2728-a086-4afd-a67a-2cc6e1a3f07e
+    fieldLayouts:
+      ac439b50-6083-4360-85cd-b6f4e6735718:
+        tabs:
+          -
+            fields:
+              3f8f7190-3271-473a-b2b0-a3b71a496554:
+                required: false
+                sortOrder: 3
+              8310a3ff-c2ea-480a-b6c2-95c441339170:
+                required: false
+                sortOrder: 1
+              98e04794-02a1-45f8-83df-ab00cb7c9a2b:
+                required: false
+                sortOrder: 2
+              f78a762e-5bdc-4d3a-99f5-8cb1b5f91ee5:
+                required: false
+                sortOrder: 4
+            name: Content
+            sortOrder: 1
+    fields:
+      3f8f7190-3271-473a-b2b0-a3b71a496554:
+        contentColumnType: string(7)
+        fieldGroup: null
+        handle: backgroundColor
+        instructions: ''
+        name: 'Background Color'
+        searchable: true
+        settings:
+          defaultColor: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\Color
+      8310a3ff-c2ea-480a-b6c2-95c441339170:
+        contentColumnType: string(620)
+        fieldGroup: null
+        handle: ctaHeadline
+        instructions: ''
+        name: 'CTA Headline'
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: 155
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      98e04794-02a1-45f8-83df-ab00cb7c9a2b:
+        contentColumnType: text
+        fieldGroup: null
+        handle: ctaLink
+        instructions: ''
+        name: 'CTA Link'
+        searchable: true
+        settings:
+          allowCustomText: ''
+          allowTarget: ''
+          defaultText: ''
+          selectLinkText: ''
+          types:
+            __assoc__:
+              -
+                - fruitstudios\linkit\models\Email
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - ''
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - customPlaceholder
+                      - ''
+              -
+                - fruitstudios\linkit\models\Phone
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - ''
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - customPlaceholder
+                      - ''
+              -
+                - fruitstudios\linkit\models\Url
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - ''
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - customPlaceholder
+                      - ''
+                    -
+                      - allowAlias
+                      - '1'
+                    -
+                      - allowMailto
+                      - '1'
+                    -
+                      - allowHash
+                      - '1'
+                    -
+                      - allowPaths
+                      - '1'
+              -
+                - fruitstudios\linkit\models\Twitter
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - ''
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - customPlaceholder
+                      - ''
+              -
+                - fruitstudios\linkit\models\Facebook
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - ''
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - customPlaceholder
+                      - ''
+              -
+                - fruitstudios\linkit\models\Instagram
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - ''
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - customPlaceholder
+                      - ''
+              -
+                - fruitstudios\linkit\models\LinkedIn
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - ''
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - customPlaceholder
+                      - ''
+              -
+                - fruitstudios\linkit\models\Entry
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - '1'
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - sources
+                      - '*'
+                    -
+                      - customSelectionLabel
+                      - ''
+              -
+                - fruitstudios\linkit\models\Category
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - ''
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - sources
+                      - '*'
+                    -
+                      - customSelectionLabel
+                      - ''
+              -
+                - fruitstudios\linkit\models\Asset
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - ''
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - sources
+                      - '*'
+                    -
+                      - customSelectionLabel
+                      - ''
+              -
+                - fruitstudios\linkit\models\User
+                -
+                  __assoc__:
+                    -
+                      - enabled
+                      - ''
+                    -
+                      - customLabel
+                      - ''
+                    -
+                      - sources
+                      - '*'
+                    -
+                      - customSelectionLabel
+                      - ''
+                    -
+                      - userPath
+                      - ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: fruitstudios\linkit\fields\LinkitField
+      f78a762e-5bdc-4d3a-99f5-8cb1b5f91ee5:
+        contentColumnType: string
+        fieldGroup: null
+        handle: backgroundImage
+        instructions: ''
+        name: 'Background Image'
+        searchable: true
+        settings:
+          allowedKinds: null
+          defaultUploadLocationSource: 'volume:d7e6a9e9-38f9-4b2f-a595-35c76b9f9272'
+          defaultUploadLocationSubpath: ''
+          limit: '1'
+          localizeRelations: false
+          restrictFiles: ''
+          selectionLabel: ''
+          showUnpermittedFiles: false
+          showUnpermittedVolumes: false
+          singleUploadLocationSource: 'volume:d7e6a9e9-38f9-4b2f-a595-35c76b9f9272'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources: '*'
+          targetSiteId: null
+          useSingleFolder: false
+          validateRelatedElements: ''
+          viewMode: large
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
+    handle: hero
+    name: Hero
+    sortOrder: 1
   fdcde59a-ab41-41c5-8d75-fa201eba23f3:
     field: 4d844d37-f1dd-4ccc-93c7-b758dfd62bc5
     fieldLayouts:
@@ -943,7 +1305,11 @@ sections:
                 name: Common
                 sortOrder: 1
               -
-                name: Story
+                fields:
+                  210d2728-a086-4afd-a67a-2cc6e1a3f07e:
+                    required: false
+                    sortOrder: 1
+                name: Home
                 sortOrder: 2
         handle: home
         hasTitleField: false

@@ -1,26 +1,41 @@
-{# -- Extend Layout -- #}
-{% extends "_layouts/_main.twig" %}
-{# -- Injection points -- #}
-{% block _openingHeadInjection %}
+{#-- Extend base layout --#}
+{% extends "_layouts/_base" %}
 
-{% endblock %}
+{#-- Set class on html element --#}
+{% set htmlClass = "" %}
 
-{% block _closingHeadInjection %}
+{#-- Set class on body element --#}
+{% set bodyClass = "" %}
 
-{% endblock %}
+{#-- Set body layout on html element --#}
+{% block body %}
 
-{% block _openingBodyInjection %}
+    <div id="page-container">
 
-{% endblock %}
+        {# -- Main Header/Nav -- #}
+        {% include "_partials/_header.twig" %}
 
-{% block _closingBodyInjection %}
+        {% for block in entry.homeHero %}
+            {% include '_home/'~block.type %}
+        {% endfor %}
+        <div id="content-container" class="container w-4/5 mx-auto">
 
-{% endblock %}
+            <main>
 
-{# -- Primary content block -- #}
-{% block content %}
-    {% include '_contentBlock/homeHero.twig' %}
-    {% for block in entry.contentBlock %}
-        {% include '_contentBlock/'~block.type %}
-    {% endfor %}
+                {# -- Primary content block -- #}
+                {% block content %}
+                    {% for block in entry.contentBlock %}
+                        {% include '_contentBlock/'~block.type %}
+                    {% endfor %}
+                {% endblock %}
+
+            </main>
+
+        </div>
+
+        {# -- Footer -- #}
+        {% include "_partials/_footer.twig" %}
+
+    </div>
+
 {% endblock %}

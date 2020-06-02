@@ -1,6 +1,6 @@
 {% set image = block.image.first %}
 {% set order = (block.leftOrRightAlignment == 'right') ? 'order-last' : '' %}
-<div class="grid gap-6 grid-cols-2 my-24" style="background-color:{{ block.backgroundColor }}">
+<div class="grid gap-6 grid-cols-2 my-32" style="background-color:{{ block.backgroundColor }}">
     <div class="{{order}}">
         <h3 class="text-3xl mb-6 font-hairline">{{ block.heading }}</h3>
         <div class="text-ctaSecondary leading-relaxed">{{ block.copy }}</div>

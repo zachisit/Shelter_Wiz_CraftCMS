@@ -1,0 +1,14 @@
+{#{{ block.contentBlock.homeHero.hero }}#}
+{#{% for d in block. %}#}
+{#{{ d }}#}
+{#{% endfor %}#}
+{% if block %}
+    {% set image = block.backgroundImage.first %}
+<div class="row relative" style="background-color:{{ block.backgroundColor }}">
+    <img class="w-10/12 mx-auto pt-6" src="{{ image.url }}" alt="{{ image.title }}" />
+    <div class="bg-lightBlue w-2/5 mx-auto text-center py-4 absolute bottom-1/12 right-0 left-0">
+        <h2 class="text-3xl mb-2 text-white">{{ block.ctaHeadline }}</h2>
+        <a class="buttonCTA" href="{{ block.ctaLink .url }}" title="{{ block.ctaLink .text }}">{{ block.ctaLink .text }}</a>
+    </div>
+</div>
+{% endif %}

@@ -1,4 +1,4 @@
-dateModified: 1591014974
+dateModified: 1591100841
 email:
   fromEmail: $SYSTEM_EMAIL_ADDRESS
   fromName: $SENDER_NAME
@@ -643,7 +643,7 @@ matrixBlockTypes:
           allowedKinds: null
           defaultUploadLocationSource: 'volume:d7e6a9e9-38f9-4b2f-a595-35c76b9f9272'
           defaultUploadLocationSubpath: ''
-          limit: ''
+          limit: '1'
           localizeRelations: false
           restrictFiles: ''
           selectionLabel: ''
@@ -661,7 +661,7 @@ matrixBlockTypes:
         translationMethod: site
         type: craft\fields\Assets
     handle: imageexplainertopfocuscta
-    name: imageExplainerTopFocusCTA
+    name: 'Image Explainer Top Focus CTA'
     sortOrder: 5
   aae11920-4212-4c70-b52d-a6100191a1fd:
     field: 4d844d37-f1dd-4ccc-93c7-b758dfd62bc5
@@ -1029,7 +1029,7 @@ matrixBlockTypes:
         searchable: true
         settings:
           allowedKinds: null
-          defaultUploadLocationSource: 'volume:d7e6a9e9-38f9-4b2f-a595-35c76b9f9272'
+          defaultUploadLocationSource: 'volume:86bfc924-0fa0-4933-84e2-1ad4261693e5'
           defaultUploadLocationSubpath: ''
           limit: '1'
           localizeRelations: false
@@ -1194,6 +1194,10 @@ navigation:
         maxLevels: null
         uid: 21e2c532-7114-4281-9868-5667a5748e5a
 plugins:
+  aws-s3:
+    edition: standard
+    enabled: true
+    schemaVersion: '1.2'
   command-palette:
     edition: standard
     enabled: true
@@ -1675,12 +1679,33 @@ users:
   photoVolumeUid: null
   requireEmailVerification: true
 volumes:
+  86bfc924-0fa0-4933-84e2-1ad4261693e5:
+    handle: s3Bucket
+    hasUrls: true
+    name: 'S3 Bucket'
+    settings:
+      addSubfolderToRootUrl: '1'
+      autoFocalPoint: ''
+      bucket: cdn.shelter-wiz-marketing-site.com
+      bucketSelectionMode: choose
+      cfDistributionId: ''
+      cfPrefix: ''
+      expires: '3 months'
+      keyId: $S3_API_KEY
+      makeUploadsPublic: '1'
+      region: us-east-1
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: $S3_ASSETS_VOLUME
+    sortOrder: 1
+    type: craft\awss3\Volume
+    url: 'https://s3.us-east-1.amazonaws.com/cdn.shelter-wiz-marketing-site.com/'
   d7e6a9e9-38f9-4b2f-a595-35c76b9f9272:
     handle: guide
     hasUrls: true
     name: Guide
     settings:
       path: '@assetBasePath/craft/guide'
-    sortOrder: 1
+    sortOrder: 2
     type: craft\volumes\Local
     url: '@assetBaseUrl/craft/guide'

@@ -1,6 +1,7 @@
 {
   "require": {
     "am-impact/amcommand": "^3.1.4",
+    "craftcms/aws-s3": "1.2.8",
     "craftcms/cms": "3.4.17.1",
     "craftcms/redactor": "2.6.1",
     "fruitstudios/linkit": "^1.0",

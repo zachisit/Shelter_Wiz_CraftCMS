@@ -6,11 +6,11 @@
                 <span class="text-white lg:text-2xl inline-block font-semibold object-bottom absolute">ShelterWiz</span>
             </a>
         </div>
-        <nav class="items-center justify-between flex-wrap w-2/5 inline-block float-right mt-3">
+        <nav class="flex-wrap w-2/5 inline-block float-right mt-3">
             {{ craft.navigation.render('mainNav', {
-                ulClass: 'w-full block flex-grow lg:flex lg:items-center lg:w-auto',
-                liClass: 'text-sm lg:flex-grow inline-block',
-                aClass: 'inline-block lg:inline-block lg:mt-0 uppercase text-white hover:text-lightBlue',
+                ulClass: 'w-full block justify-between lg:flex lg:items-center lg:w-auto',
+                liClass: 'text-sm inline-block last:mr-0',
+                aClass: 'inline-block lg:inline-block lg:mt-0 uppercase text-white hover:text-lightBlue font-light',
                 activeClass: 'nav-active'
             }) }}
         </nav>

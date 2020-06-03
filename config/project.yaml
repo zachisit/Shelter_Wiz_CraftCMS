@@ -1,4 +1,4 @@
-dateModified: 1591100841
+dateModified: 1591184900
 email:
   fromEmail: $SYSTEM_EMAIL_ADDRESS
   fromName: $SENDER_NAME
@@ -14,9 +14,26 @@ fieldGroups:
     name: Common
   7d3d7a77-b9ed-4801-802e-766227192fe5:
     name: Home
+  a09208a6-9dd6-43c4-9448-3b32f83fdf9d:
+    name: 'Contact Form'
   d1aa7193-5429-493b-92d2-11fcbe8609a3:
     name: Pricing
 fields:
+  20dfcc14-60ce-4714-87ae-44196a82476c:
+    contentColumnType: string
+    fieldGroup: a09208a6-9dd6-43c4-9448-3b32f83fdf9d
+    handle: contactFormFields
+    instructions: ''
+    name: 'Contact Form Fields'
+    searchable: true
+    settings:
+      contentTable: '{{%matrixcontent_contactformfields}}'
+      maxBlocks: ''
+      minBlocks: ''
+      propagationMethod: all
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix
   210d2728-a086-4afd-a67a-2cc6e1a3f07e:
     contentColumnType: string
     fieldGroup: 7d3d7a77-b9ed-4801-802e-766227192fe5
@@ -1051,6 +1068,56 @@ matrixBlockTypes:
     handle: hero
     name: Hero
     sortOrder: 1
+  ea22ed24-6226-42f3-8bf9-10b50633715c:
+    field: 20dfcc14-60ce-4714-87ae-44196a82476c
+    fieldLayouts:
+      a6efae86-b32f-42c4-a49c-fd0ecf3534d3:
+        tabs:
+          -
+            fields:
+              3a466682-ed8f-43c1-a357-e3b744d386e6:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      3a466682-ed8f-43c1-a357-e3b744d386e6:
+        contentColumnType: string
+        fieldGroup: null
+        handle: entry
+        instructions: ''
+        name: Entry
+        searchable: true
+        settings:
+          columns:
+            __assoc__:
+              -
+                - dd2c14f2-162b-488c-bb65-6731e7b9fdda
+                -
+                  __assoc__:
+                    -
+                      - width
+                      - ''
+              -
+                - 2c68de28-8239-4111-bc10-a541400dc7b9
+                -
+                  __assoc__:
+                    -
+                      - width
+                      - ''
+          contentTable: '{{%stc_16_entry}}'
+          fieldLayout: table
+          maxRows: ''
+          minRows: ''
+          propagationMethod: all
+          selectionLabel: ''
+          staticField: ''
+        translationKeyFormat: null
+        translationMethod: site
+        type: verbb\supertable\fields\SuperTableField
+    handle: entry
+    name: Entry
+    sortOrder: 1
   fdcde59a-ab41-41c5-8d75-fa201eba23f3:
     field: 4d844d37-f1dd-4ccc-93c7-b758dfd62bc5
     fieldLayouts:
@@ -1140,7 +1207,7 @@ matrixBlockTypes:
           cleanupHtml: true
           columnType: text
           purifierConfig: ''
-          purifyHtml: '1'
+          purifyHtml: ''
           redactorConfig: ''
           removeEmptyTags: '1'
           removeInlineStyles: '1'
@@ -1202,6 +1269,16 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      allowAttachments: ''
+      prependSender: 'On behalf of'
+      prependSubject: 'New message from ShelterWiz'
+      successFlashMessage: 'Your message has been sent.'
+      toEmail: zach@happycog.com
   cp-field-inspect:
     edition: standard
     enabled: true
@@ -1343,6 +1420,48 @@ sections:
         template: _pages/_home
         uriFormat: __home__
     type: single
+  fc19b456-d744-4c82-95aa-a4b448c60f15:
+    enableVersioning: true
+    entryTypes:
+      462ba5f1-25b5-4f50-96ed-06b75ca49f15:
+        fieldLayouts:
+          36d94379-2d80-418f-8df0-f82b9b1e9e74:
+            tabs:
+              -
+                fields:
+                  20dfcc14-60ce-4714-87ae-44196a82476c:
+                    required: false
+                    sortOrder: 1
+                name: 'Contact Form'
+                sortOrder: 1
+        handle: contactForm
+        hasTitleField: true
+        name: 'Contact Form'
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: contactForm
+    name: 'Contact Form'
+    previewTargets:
+      -
+        __assoc__:
+          -
+            - label
+            - 'Primary entry page'
+          -
+            - urlFormat
+            - '{url}'
+          -
+            - refresh
+            - '1'
+    propagationMethod: all
+    siteSettings:
+      28ddc74b-22f4-45d9-9062-a22e5d7f9be6:
+        enabledByDefault: true
+        hasUrls: true
+        template: _pages/contactForm
+        uriFormat: '{slug}'
+    type: channel
 siteGroups:
   954f3b0b-e9ea-4a38-9df5-77d84f8aeb43:
     name: 'Happy Cog Craft CMS Boilerplate'
@@ -1380,6 +1499,58 @@ superTableBlockTypes:
         settings:
           byteLimit: null
           charLimit: 100
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+  d8e7f84d-c87b-417e-b68d-433437959ad6:
+    field: 3a466682-ed8f-43c1-a357-e3b744d386e6
+    fieldLayouts:
+      07520773-5f8c-4a9a-8aeb-0e5f29f7faf8:
+        tabs:
+          -
+            fields:
+              2c68de28-8239-4111-bc10-a541400dc7b9:
+                required: false
+                sortOrder: 2
+              dd2c14f2-162b-488c-bb65-6731e7b9fdda:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      2c68de28-8239-4111-bc10-a541400dc7b9:
+        contentColumnType: string(200)
+        fieldGroup: null
+        handle: fieldLabel
+        instructions: ''
+        name: 'Field Label'
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: 50
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      dd2c14f2-162b-488c-bb65-6731e7b9fdda:
+        contentColumnType: string(200)
+        fieldGroup: null
+        handle: fieldName
+        instructions: ''
+        name: 'Field Name'
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: 50
           code: ''
           columnType: null
           initialRows: '4'

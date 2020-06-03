@@ -5,10 +5,18 @@
 @import "./_extensions";
 
 .buttonCTA {
-  @apply transition ease-in-out duration-900 text-center px-7 py-2 bg-darkPurple rounded-lg text-white text-base;
+  @apply transition ease-in-out duration-700 text-center px-7 py-2 bg-darkPurple rounded-lg text-white text-base;
 
   &:hover {
     @apply bg-lightPurple;
+  }
+}
+
+.logo {
+  &:hover {
+    img {
+      transform:scaleX(-1);
+    }
   }
 }
 

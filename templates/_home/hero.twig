@@ -6,8 +6,8 @@
     {% set image = block.backgroundImage.first %}
 <div class="row relative" style="background-color:{{ block.backgroundColor }}">
     <img class="w-10/12 mx-auto pt-6" src="{{ image.url }}" alt="{{ image.title }}" />
-    <div class="bg-lightBlue w-2/5 mx-auto text-center py-4 absolute bottom-1/12 right-0 left-0">
-        <h2 class="text-3xl mb-2 text-white">{{ block.ctaHeadline }}</h2>
+    <div class="bg-lightBlue w-auto p-2 mx-auto text-center py-4 absolute bottom-1/12 right-0 left-0" style="width:fit-content">
+        <h2 class="text-base mb-2 text-white sm:text-1xl md:text-2xl lg:text-3xl">{{ block.ctaHeadline }}</h2>
         <a class="buttonCTA" href="{{ block.ctaLink .url }}" title="{{ block.ctaLink .text }}">{{ block.ctaLink .text }}</a>
     </div>
 </div>

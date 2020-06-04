@@ -20,5 +20,9 @@
   }
 }
 
+.g-input-field {
+  @apply border-solid border-2 border-gray-300 rounded-lg p-1 w-auto w-full;
+}
+
 @tailwind utilities;
 

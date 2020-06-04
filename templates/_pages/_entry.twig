@@ -22,4 +22,7 @@
     {% for block in entry.contentBlock %}
        {% include '_contentBlock/'~block.type %}
     {% endfor %}
+    {% for block in entry.contactFormFields %}
+        {% include '_pages/contactForm/' %}
+    {% endfor %}
 {% endblock %}

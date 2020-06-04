@@ -1,10 +1,18 @@
-dateModified: 1591184900
+dateModified: 1591273594
 email:
-  fromEmail: $SYSTEM_EMAIL_ADDRESS
+  fromEmail: $SENDER_EMAIL
   fromName: $SENDER_NAME
+  replyToEmail: $SYSTEM_EMAIL_ADDRESS
   template: ''
-  transportSettings: null
-  transportType: craft\mail\transportadapters\Sendmail
+  transportSettings:
+    encryptionMethod: tls
+    host: $MAIL_HOST
+    password: $MAIL_PASSWORD
+    port: $MAIL_PORT
+    timeout: '10'
+    useAuthentication: '1'
+    username: $MAIL_USERNAME
+  transportType: craft\mail\transportadapters\Smtp
 fieldGroups:
   40ef1322-0f91-4250-bc9b-42d261ee6de7:
     name: Footer
@@ -1075,12 +1083,36 @@ matrixBlockTypes:
         tabs:
           -
             fields:
+              2f25b8e1-3942-4115-93f4-498f3479e2c9:
+                required: false
+                sortOrder: 2
               3a466682-ed8f-43c1-a357-e3b744d386e6:
                 required: false
                 sortOrder: 1
             name: Content
             sortOrder: 1
     fields:
+      2f25b8e1-3942-4115-93f4-498f3479e2c9:
+        contentColumnType: string
+        fieldGroup: null
+        handle: redirecturl
+        instructions: ''
+        name: RedirectURL
+        searchable: false
+        settings:
+          limit: '1'
+          localizeRelations: false
+          selectionLabel: ''
+          source: null
+          sources:
+            - 'section:746f705b-bbfb-4ed5-a136-563cddf538c7'
+            - singles
+          targetSiteId: null
+          validateRelatedElements: ''
+          viewMode: null
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Entries
       3a466682-ed8f-43c1-a357-e3b744d386e6:
         contentColumnType: string
         fieldGroup: null
@@ -1100,6 +1132,13 @@ matrixBlockTypes:
                       - ''
               -
                 - 2c68de28-8239-4111-bc10-a541400dc7b9
+                -
+                  __assoc__:
+                    -
+                      - width
+                      - ''
+              -
+                - 541bef17-e49d-418b-9eba-93d0b1abc0c2
                 -
                   __assoc__:
                     -
@@ -1278,7 +1317,7 @@ plugins:
       prependSender: 'On behalf of'
       prependSubject: 'New message from ShelterWiz'
       successFlashMessage: 'Your message has been sent.'
-      toEmail: zach@happycog.com
+      toEmail: $SYSTEM_EMAIL_ADDRESS
   cp-field-inspect:
     edition: standard
     enabled: true
@@ -1429,11 +1468,21 @@ sections:
             tabs:
               -
                 fields:
+                  4d844d37-f1dd-4ccc-93c7-b758dfd62bc5:
+                    required: false
+                    sortOrder: 1
+                  d07dee6c-2ba4-48db-b038-55ed6967d8bb:
+                    required: false
+                    sortOrder: 2
+                name: Common
+                sortOrder: 1
+              -
+                fields:
                   20dfcc14-60ce-4714-87ae-44196a82476c:
                     required: false
                     sortOrder: 1
                 name: 'Contact Form'
-                sortOrder: 1
+                sortOrder: 2
         handle: contactForm
         hasTitleField: true
         name: 'Contact Form'
@@ -1459,7 +1508,7 @@ sections:
       28ddc74b-22f4-45d9-9062-a22e5d7f9be6:
         enabledByDefault: true
         hasUrls: true
-        template: _pages/contactForm
+        template: _pages/_entry
         uriFormat: '{slug}'
     type: channel
 siteGroups:
@@ -1517,6 +1566,9 @@ superTableBlockTypes:
               2c68de28-8239-4111-bc10-a541400dc7b9:
                 required: false
                 sortOrder: 2
+              541bef17-e49d-418b-9eba-93d0b1abc0c2:
+                required: false
+                sortOrder: 3
               dd2c14f2-162b-488c-bb65-6731e7b9fdda:
                 required: false
                 sortOrder: 1
@@ -1541,6 +1593,63 @@ superTableBlockTypes:
         translationKeyFormat: null
         translationMethod: none
         type: craft\fields\PlainText
+      541bef17-e49d-418b-9eba-93d0b1abc0c2:
+        contentColumnType: string
+        fieldGroup: null
+        handle: fieldType
+        instructions: ''
+        name: 'Field Type'
+        searchable: false
+        settings:
+          optgroups: true
+          options:
+            -
+              __assoc__:
+                -
+                  - label
+                  - 'Text Input'
+                -
+                  - value
+                  - text
+                -
+                  - default
+                  - '1'
+            -
+              __assoc__:
+                -
+                  - label
+                  - Textfield
+                -
+                  - value
+                  - textarea
+                -
+                  - default
+                  - ''
+            -
+              __assoc__:
+                -
+                  - label
+                  - 'Number Input'
+                -
+                  - value
+                  - number
+                -
+                  - default
+                  - ''
+            -
+              __assoc__:
+                -
+                  - label
+                  - 'Email Input'
+                -
+                  - value
+                  - email
+                -
+                  - default
+                  - ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\Dropdown
       dd2c14f2-162b-488c-bb65-6731e7b9fdda:
         contentColumnType: string(200)
         fieldGroup: null

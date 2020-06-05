@@ -3,6 +3,9 @@ const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   theme: {
+    screens: {
+      'phone':{'min':'0px','max':'639px'}
+    },
     fontFamily: {
       'body': ['Roboto', 'sans-serif']
     },

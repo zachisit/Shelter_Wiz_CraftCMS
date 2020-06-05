@@ -1,6 +1,6 @@
 {% set image = block.image.first %}
-<div class="container my-20">
+<div class="my-20 mx-auto phone:w-full">
     <div>
-        <img src="{{ image.url }}" alt="{{ image.title }}" class="m-auto" />
+        <img src="{{ image.url }}" alt="{{ image.title }}" class="mx-auto phone:w-full" />
     </div>
 </div>

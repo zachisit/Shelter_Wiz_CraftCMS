@@ -4,6 +4,8 @@
 
 @import "./_extensions";
 
+@tailwind utilities;
+
 .buttonCTA {
   @apply transition ease-in-out duration-700 text-center px-7 py-2 bg-darkPurple rounded-lg text-white text-base;
 
@@ -24,5 +26,8 @@
   @apply border-solid border-2 border-gray-300 rounded-lg p-1 w-auto w-full;
 }
 
-@tailwind utilities;
+#content-container a {
+  @apply text-darkPurple font-medium underline;
+}
+
 

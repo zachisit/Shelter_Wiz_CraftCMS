@@ -1,9 +1,9 @@
 {% set image = block.image.first %}
 {% set order = (block.leftOrRightAlignment == 'right') ? 'order-last' : '' %}
-<div class="grid gap-6 grid-cols-2 my-32" style="background-color:{{ block.backgroundColor }}">
-    <div class="{{order}}">
-        <h3 class="text-3xl mb-6 font-hairline">{{ block.heading }}</h3>
-        <div class="text-ctaSecondary leading-relaxed">{{ block.copy }}</div>
+<div class="grid gap-6 grid-cols-2 my-32 phone:my-8" style="background-color:{{ block.backgroundColor }}">
+    <div class="{{order}} md:mb-10 phone:mb-10">
+        <h3 class="text-3xl mb-6 font-hairline phone:mb-2 phone:text-center">{{ block.heading }}</h3>
+        <div class="text-ctaSecondary leading-relaxed sm:mb-5 phone:mb-4 phone:text-center">{{ block.copy }}</div>
         {% if block.linkCTA %}
             <p class="mt-8 text-center">
                 <a class="buttonCTA" href="{{ block.linkCTA.url }}" title="{{ block.linkCTA.text }}">{{ block.linkCTA.text }}</a>

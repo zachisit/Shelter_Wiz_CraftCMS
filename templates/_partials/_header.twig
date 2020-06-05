@@ -1,15 +1,15 @@
 <header class="bg-darkPurple">
-    <div class="w-11/12 mx-auto py-6">
+    <div class="w-11/12 mx-auto py-5">
         <div class="logo inline-block w-40 relative">
             <a href="{{ siteUrl }}" title="{{ siteName }} Home">
                 <img class="w-8 inline-block" src="https://shelterwiz.com/wp-content/themes/shelter-wiz-twentynineteen/images/logo.png" alt="Logo">
-                <span class="text-white lg:text-2xl inline-block font-semibold object-bottom absolute">ShelterWiz</span>
+                <span class="text-white text-2xl inline-block font-semibold object-bottom absolute">ShelterWiz</span>
             </a>
         </div>
         <nav class="flex-wrap w-2/5 inline-block float-right mt-3">
             {{ craft.navigation.render('mainNav', {
                 ulClass: 'w-full block justify-between lg:flex lg:items-center lg:w-auto',
-                liClass: 'text-sm inline-block last:mr-0',
+                liClass: 'text-sm inline-block mr-5 last:mr-0',
                 aClass: 'inline-block lg:inline-block lg:mt-0 uppercase text-white hover:text-lightBlue font-light',
                 activeClass: 'nav-active'
             }) }}

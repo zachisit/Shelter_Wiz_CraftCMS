@@ -1,14 +1,16 @@
-{#{{ block.contentBlock.homeHero.hero }}#}
-{#{% for d in block. %}#}
-{#{{ d }}#}
-{#{% endfor %}#}
 {% if block %}
     {% set image = block.backgroundImage.first %}
-<div class="row relative" style="background-color:{{ block.backgroundColor }}">
-    <img class="w-10/12 mx-auto pt-6 max-w-6xl phone:pt-0" src="{{ image.url }}" alt="{{ image.title }}" />
-    <div class="bg-lightBlue w-auto px-5 mx-auto text-center py-4 absolute bottom-1/12 right-0 left-0" style="width:fit-content">
-        <h2 class="mb-2 text-white sm:text-1xl md:text-2xl lg:text-3xl phone:text-1xl">{{ block.ctaHeadline }}</h2>
-        <a class="buttonCTA" href="{{ block.ctaLink .url }}" title="{{ block.ctaLink .text }}">{{ block.ctaLink .text }}</a>
+    <div class="row relative py-10" style="background-color:{{ block.backgroundColor }}">
+        <div class="w-2/3 mx-auto">
+            <div class="w-2/5 inline-block align-top">
+                <h3 class="text-2xl text-center mb-6 font-hairline phone:mb-2 phone:text-center">{{ block.ctaHeadline }}</h3>
+                <div class="text-center">
+                    <a class="buttonCTA" href="{{ block.ctaLink .url }}" title="{{ block.ctaLink .text }}">{{ block.ctaLink .text }}</a>
+                </div>
+            </div>
+            <div class="w-2/4 inline-block">
+                <img class="" src="{{ image.url }}" alt="{{ image.title }}" />
+            </div>
+        </div>
     </div>
-</div>
 {% endif %}
